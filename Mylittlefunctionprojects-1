@@ -1,0 +1,224 @@
+# This script has my old function projects
+
+
+
+# RETURNS TRUE IF ANY NUMBER IS EVEN INSIDE A LIST
+
+def check_even_list(num_list):
+    
+    for i in num_list:
+        if i % 2 == 0:
+            return True
+        else:
+            return False
+            
+            
+ # RETURN ALL THE EVEN NUMBERS IN A LIST
+
+def check_even_list(num_list):
+
+    # placeholder variables
+   
+   even_numbers= []
+    
+    for i in num_list:
+        
+        if i % 2 == 0:
+            even_numbers.append(i)
+            
+        else:
+            pass
+        
+    return even_numbers
+    
+    
+  # PROVIDES THE VOLUME OF A SPHERE
+    
+  def vol(rad):
+  
+    return (4/3)*3.14*rad**3
+    
+  #WRITE A FUNCTION THAT CHECKS WHETHER A NUMBER IS IN A GIVEN RANGE
+  
+  def ran_check(num,low,high):
+    
+    if num in range(low,high+1):
+        
+        return f"{num} is in the range between {low} and {high}"
+    
+    else:
+        
+        return "It is not in range"
+        
+        
+        
+# Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters 
+    
+def up_low(s):
+    
+    x = 0
+    y = 0
+    
+    for i in range(0,len(s)):
+        
+        if s[i].isupper() == True:
+            x += 1
+       
+       elif s[i] == " " :
+            pass
+       
+       else:
+            y += 1
+            
+    print(f"No. of Upper case characters :{x}")
+    print(f"No. of Lower case characters :{y}")
+    
+ # Write a Python function that takes a list and returns a new list with unique elements of the first list. 
+
+def unique_list(lst):
+    x = set(lst)
+    
+    return list(x)
+
+
+
+# Write a Python function to multiply all the numbers in a list.
+
+def multiply(numbers,*args):
+    
+    x = 1
+    for i in range(0,len(numbers)):
+        while i < len(numbers):
+            
+            x = x*numbers[i]
+            i += 1
+            break
+    return x
+
+
+# Write a Python function that checks whether a word or phrase is palindrome or not.
+
+def palindrome(s):
+    x = s
+    y = s[::-1]
+    if x == y:
+        return True
+    else:
+        return False
+    
+    
+  # Write a Python function to check whether a string is pangram or not. (Assume the string passed in does not have any punctuation)
+    
+
+
+import string
+
+def ispangram(str1, alphabet=string.ascii_lowercase):
+   
+   x = set(string.ascii_lowercase)
+    
+    y = set(str1)
+   
+   a = x.intersection(y)
+   
+   if a == x:
+        return True
+   
+   else:
+        return False
+
+# Calculates employee of the month 
+
+def emloyee_check(work_hours):
+    
+    current_max = 0
+    
+    employee_of_month = ""
+    
+    for employee,hours in work_hours:
+        if hours > current_max:
+            current_max = hours
+            employee_of_month = employee
+        else:
+            pass
+    
+    
+    return (employee_of_month,current_max)
+
+   # A little game that user tries to guess if current integer is 0,1 or 2
+   
+   from random import shuffle
+   
+   def shuffle_list(i):
+    shuffle(i)
+    return i
+   
+   def player_guess():
+    
+    guess = " "
+    
+    
+    while guess not in ["0","1","2"]:
+        guess = input("Pick a number : 0, 1 or 2 ")
+    
+    return int(guess)
+    
+    myindex = player_guess()
+    
+    def check_guess(mylist,guess):
+    
+    if mylist[guess] == "0" :
+        print("Correct!")
+    
+    else:
+        print("Wrong guess!")
+        print(mylist)
+        # Initial list
+
+mylist = [" ","O"," "]
+
+# Shuffle list
+
+mixedup_list = shuffle_list(mylist)
+
+# User guess
+
+guess = player_guess()
+
+# Check guess 
+
+check_guess(mixedup_list,guess)
+
+
+# Gives a even number list 
+
+def myfunc(*args):
+    n = []
+    for i in args:
+        if i % 2 == 0:
+            n.append(i)
+        
+        else:
+            pass
+            
+# Changes strings letters as 1 big 1 small letter in an order
+            
+def myfunc(args):
+    n = ""
+    
+    for i in range(0,len(args)):
+        if i % 2==0:
+            
+            n += args[i].lower()
+        else:
+            
+            n += args[i].upper()
+    return n
+    
+    
+
+    return n
+
+
+
+
